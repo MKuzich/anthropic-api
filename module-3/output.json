@@ -1,0 +1,44 @@
+[
+  {
+    "output": "# One-Day Carbohydrate-Loading Meal Plan for Marathon Race Day\n\nHere is a one-day meal plan for an athlete aiming to carbohydrate-load the day before a marathon competition:\n\n* **Calorie Target:** Approximately 3,200 calories\n* **Macronutrient Breakdown:** Protein (115g), Fat (65g), Carbs (510g)\n\n**Meal Plan:**\n\n* **Breakfast (7:00 AM):** Pancakes (3 medium, 120g) with honey (40g) and a side of turkey bacon (60g). Orange juice (250ml).\n  * Protein: 18g, Fat: 12g, Carbs: 85g\n\n* **Mid-Morning Snack (10:00 AM):** Bagel (80g) with jam (30g) and banana (150g).\n  * Protein: 10g, Fat: 3g, Carbs: 75g\n\n* **Lunch (1:00 PM):** Pasta with marinara sauce (250g cooked pasta, 150g sauce), lean ground turkey (100g), and side salad with olive oil dressing (100g greens, 20ml dressing). White bread roll (50g).\n  * Protein: 35g, Fat: 15g, Carbs: 120g\n\n* **Afternoon Snack (4:00 PM):** Rice cakes (50g) with peanut butter (25g), apple (150g), and sports drink (500ml).\n  * Protein: 12g, Fat: 12g, Carbs: 95g\n\n* **Dinner (7:00 PM):** Baked chicken breast (130g), white rice (200g cooked), steamed carrots (150g), and low-fat gravy (50ml).\n  * Protein: 32g, Fat: 8g, Carbs: 95g\n\n* **Evening Snack (9:00 PM):** Pretzels (50g) and sports drink (300ml).\n  * Protein: 8g, Fat: 3g, Carbs: 65g\n\nThis carbohydrate-loading meal plan maximizes muscle glycogen storage with easily digestible, low-fiber carbohydrates while maintaining adequate protein for muscle recovery and moderate fat for satiety. The timing and composition support optimal race-day energy availability.",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "180 cm",
+        "weight": "72 kg",
+        "goal": "Carbohydrate-loading meal plan for marathon race day (day before competition)",
+        "restrictions": "None"
+      },
+      "solution_criteria": [
+        "Meal plan covers one full day with 3+ meals/snacks",
+        "Total daily carbohydrates comprise 8-12g per kg body weight (~580-860g)",
+        "All meals are practical, easy-to-digest foods suitable for pre-race preparation",
+        "Plan is presented in compact, concise format"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with a professional endurance athlete (marathon runner) who has high caloric needs and specific carbohydrate-loading requirements the day before a race"
+    },
+    "score": 5,
+    "reasoning": "The solution successfully meets all three mandatory requirements with clear presentation of daily calories, macronutrient breakdown, and detailed meals with portions and timing. However, it fails a critical secondary criterion: the carbohydrate content of 510g represents only 7.1g per kg body weight, falling short of the specified 8-12g range. For a carbohydrate-loading meal plan, this is a significant deficiency that undermines the stated goal. The foods selected are appropriate and practical for pre-race preparation, and the format is reasonably compact. The failure to meet the carbohydrate loading target is a material issue for this specific use case."
+  },
+  {
+    "output": "# One-Day Meal Plan for Rock Climbing Performance\n\nHere is a one-day meal plan for an athlete aiming to maintain lean muscle and sustained energy for rock climbing:\n\n* **Calorie Target:** Approximately 2,400 calories\n* **Macronutrient Breakdown:** Protein (110g), Fat (75g), Carbs (310g)\n\n## Meal Plan:\n\n* **Breakfast (7:00 AM):** Greek yogurt (200g, plain non-fat) with granola (50g), mixed berries (100g), and ground flaxseed (15g). Whole wheat toast (50g) with almond butter (20g).\n    * Protein: 25g, Fat: 18g, Carbs: 65g\n\n* **Mid-Morning Snack (10:00 AM):** Banana (120g) with peanut butter (25g) and a handful of almonds (20g).\n    * Protein: 12g, Fat: 18g, Carbs: 35g\n\n* **Lunch (1:00 PM):** Chickpea and vegetable curry made with chickpeas (150g cooked), spinach (100g), bell peppers (80g), onion (50g), and coconut milk (100ml). Brown rice (80g cooked).\n    * Protein: 18g, Fat: 15g, Carbs: 75g\n\n* **Afternoon Snack (4:00 PM):** Hummus (60g) with carrot sticks (100g), celery (80g), and whole grain crackers (30g).\n    * Protein: 8g, Fat: 10g, Carbs: 30g\n\n* **Dinner (7:00 PM):** Baked tofu (180g) marinated with tamari and ginger, served with quinoa (80g cooked) and roasted broccoli (200g) with olive oil (10ml).\n    * Protein: 35g, Fat: 14g, Carbs: 70g\n\n* **Evening Snack (9:00 PM):** Protein smoothie with plant-based protein powder (25g), unsweetened almond milk (240ml), and half an avocado (60g).\n    * Protein: 12g, Fat: 10g, Carbs: 15g\n\nThis meal plan prioritizes plant-based protein sources (legumes, tofu, Greek yogurt, nuts), complex carbohydrates, and healthy fats to support muscle recovery, sustained energy levels, and climbing performance while remaining budget-friendly.",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "172 cm",
+        "weight": "65 kg",
+        "goal": "Maintain lean muscle and sustained energy for rock climbing performance",
+        "restrictions": "Vegetarian"
+      },
+      "solution_criteria": [
+        "Meal plan covers all three meals and includes vegetarian protein sources (legumes, dairy, nuts, seeds)",
+        "Macronutrient distribution supports lean muscle maintenance with adequate protein intake",
+        "Foods provide sustained energy suitable for climbing performance and recovery",
+        "Plan is concise and presented in a clear, easy-to-follow 1-day format"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with a lightweight sport athlete (rock climber) who needs balanced macronutrients with emphasis on lean protein and sustained energy, with dietary restrictions (vegetarian)"
+    },
+    "score": 8,
+    "reasoning": "The solution fully satisfies all mandatory requirements with clear presentation of daily calories, macronutrient breakdown, and detailed meals with portions and times. It appropriately addresses the vegetarian constraint with diverse plant-based proteins and provides sustained energy through complex carbohydrates suitable for climbing. The plan is generally clear and easy to follow. However, there are minor arithmetic inconsistencies in the macronutrient totals, and the plan could be more concise given the explicit request for a compact format. These are secondary issues that don't undermine the core quality of the meal plan."
+  }
+]

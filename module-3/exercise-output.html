@@ -1,0 +1,205 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">2</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">8.5 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">100.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Testing with a humanities passage containing abstract concepts and interdisciplinary themes to verify accurate extraction of nuanced, overlapping topics</td>
+                <td class="prompt-inputs"><strong>content:</strong> The phenomenological approach to understanding consciousness has long intersected with cognitive science, particularly in examining how subjective experience emerges from neural processes. Heidegger's concept of Being-in-the-world challenges Cartesian dualism by suggesting that consciousness is fundamentally embedded within social and material contexts rather than existing as a disembodied entity. Contemporary neuroscientific research on embodied cognition supports this philosophical framework, revealing that emotional processing, memory formation, and semantic understanding are deeply intertwined with bodily states and environmental interactions. Furthermore, postcolonial theory has critiqued the Western-centric epistemology underlying both traditional phenomenology and neuroscience, arguing for recognition of culturally diverse ways of knowing and experiencing reality. These intersecting perspectives—phenomenology, cognitive neuroscience, embodied cognition, and postcolonial critique—collectively reshape our understanding of consciousness as a multifaceted phenomenon that resists reductionist explanation.</td>
+                <td class="criteria">• Extracts all major disciplinary fields and theoretical frameworks mentioned (phenomenology, cognitive science, neuroscience, postcolonial theory, embodied cognition)<br>• Captures abstract conceptual topics that overlap across disciplines (consciousness, Being-in-the-world, subjective experience, epistemology)<br>• Identifies nuanced, interconnected themes rather than only surface-level terms<br>• Returns output as a valid JSON array of strings</td>
+                <td class="output"><pre>```json
+[
+  "phenomenological approach to consciousness",
+  "cognitive science",
+  "subjective experience",
+  "neural processes",
+  "Heidegger's Being-in-the-world",
+  "Cartesian dualism",
+  "embodied cognition",
+  "emotional processing",
+  "memory formation",
+  "semantic understanding",
+  "bodily states",
+  "environmental interactions",
+  "postcolonial theory",
+  "Western-centric epistemology",
+  "culturally diverse ways of knowing",
+  "consciousness",
+  "reductionism"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-high">8</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements: it is a valid JSON array of strings with only topics and no commentary. It successfully extracts major disciplinary frameworks and theoretical concepts as specified in the secondary criteria. However, there are minor gaps in comprehensiveness—'neuroscience' is mentioned explicitly in the text but not extracted as a standalone topic, and 'Cartesian dualism' is a significant philosophical concept that warrants independent extraction rather than being nested within another phrase. The solution demonstrates strong understanding of nuanced, interconnected themes but falls slightly short of capturing all major topics mentioned.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a dense technical biology passage containing specialized nomenclature, methodology terms, and organism names to ensure precise identification of domain-specific topics</td>
+                <td class="prompt-inputs"><strong>content:</strong> We employed quantitative PCR analysis to investigate CRISPR-Cas9 gene editing efficiency in Arabidopsis thaliana transgenic lines carrying a doxycycline-inducible promoter system. Genomic DNA was extracted using the CTAB method, and target sequences within the AtPDS3 locus were amplified using sequence-specific primers designed to detect both wild-type and edited alleles. RNA-seq transcriptomics revealed significant upregulation of DNA repair pathways, including homologous recombination and non-homologous end joining mechanisms, with differential expression analysis identifying 847 significantly dysregulated genes (FDR < 0.05). Off-target mutagenesis was assessed through whole-genome sequencing of predicted off-target sites identified by CRISPOR software, while phenotypic characterization included chlorophyll fluorescence measurements and stomatal conductance assays to evaluate photosynthetic performance in the edited germplasm.</td>
+                <td class="criteria">• Extracts all major domain-specific topics including molecular techniques (PCR, CRISPR-Cas9, RNA-seq), biological organisms (Arabidopsis thaliana), genetic elements (AtPDS3 locus), and analytical methods (CTAB extraction, whole-genome sequencing, fluorescence measurements)<br>• Correctly identifies specialized nomenclature and methodology terms as distinct topics rather than treating them as modifiers<br>• Returns output as a JSON array of strings with each topic as a separate array element</td>
+                <td class="output"><pre>```json
+[
+  "CRISPR-Cas9 gene editing",
+  "Arabidopsis thaliana",
+  "transgenic lines",
+  "doxycycline-inducible promoter",
+  "quantitative PCR",
+  "CTAB method",
+  "AtPDS3 locus",
+  "RNA-seq transcriptomics",
+  "DNA repair pathways",
+  "homologous recombination",
+  "non-homologous end joining",
+  "differential expression analysis",
+  "off-target mutagenesis",
+  "whole-genome sequencing",
+  "CRISPOR software",
+  "chlorophyll fluorescence",
+  "stomatal conductance",
+  "photosynthetic performance"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements: it is a valid JSON array of strings containing topics without commentary, and the response contains only the JSON array. It performs very well against the secondary criteria by extracting the major domain-specific topics, molecular techniques, organisms, genetic elements, and analytical methods specified. However, there are some minor omissions of identifiable topics from the passage that prevent a perfect score. The extraction is thorough and accurate for the most important concepts, with appropriate handling of specialized nomenclature as distinct topics.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    

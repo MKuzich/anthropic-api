@@ -1,0 +1,27 @@
+[
+  {
+    "prompt_inputs": {
+      "content": "The phenomenological approach to understanding consciousness has long intersected with cognitive science, particularly in examining how subjective experience emerges from neural processes. Heidegger's concept of Being-in-the-world challenges Cartesian dualism by suggesting that consciousness is fundamentally embedded within social and material contexts rather than existing as a disembodied entity. Contemporary neuroscientific research on embodied cognition supports this philosophical framework, revealing that emotional processing, memory formation, and semantic understanding are deeply intertwined with bodily states and environmental interactions. Furthermore, postcolonial theory has critiqued the Western-centric epistemology underlying both traditional phenomenology and neuroscience, arguing for recognition of culturally diverse ways of knowing and experiencing reality. These intersecting perspectives\u2014phenomenology, cognitive neuroscience, embodied cognition, and postcolonial critique\u2014collectively reshape our understanding of consciousness as a multifaceted phenomenon that resists reductionist explanation."
+    },
+    "solution_criteria": [
+      "Extracts all major disciplinary fields and theoretical frameworks mentioned (phenomenology, cognitive science, neuroscience, postcolonial theory, embodied cognition)",
+      "Captures abstract conceptual topics that overlap across disciplines (consciousness, Being-in-the-world, subjective experience, epistemology)",
+      "Identifies nuanced, interconnected themes rather than only surface-level terms",
+      "Returns output as a valid JSON array of strings"
+    ],
+    "task_description": "Extract topics out of a passage of text from a scholarly article into a JSON array of strings",
+    "scenario": "Testing with a humanities passage containing abstract concepts and interdisciplinary themes to verify accurate extraction of nuanced, overlapping topics"
+  },
+  {
+    "prompt_inputs": {
+      "content": "We employed quantitative PCR analysis to investigate CRISPR-Cas9 gene editing efficiency in Arabidopsis thaliana transgenic lines carrying a doxycycline-inducible promoter system. Genomic DNA was extracted using the CTAB method, and target sequences within the AtPDS3 locus were amplified using sequence-specific primers designed to detect both wild-type and edited alleles. RNA-seq transcriptomics revealed significant upregulation of DNA repair pathways, including homologous recombination and non-homologous end joining mechanisms, with differential expression analysis identifying 847 significantly dysregulated genes (FDR < 0.05). Off-target mutagenesis was assessed through whole-genome sequencing of predicted off-target sites identified by CRISPOR software, while phenotypic characterization included chlorophyll fluorescence measurements and stomatal conductance assays to evaluate photosynthetic performance in the edited germplasm."
+    },
+    "solution_criteria": [
+      "Extracts all major domain-specific topics including molecular techniques (PCR, CRISPR-Cas9, RNA-seq), biological organisms (Arabidopsis thaliana), genetic elements (AtPDS3 locus), and analytical methods (CTAB extraction, whole-genome sequencing, fluorescence measurements)",
+      "Correctly identifies specialized nomenclature and methodology terms as distinct topics rather than treating them as modifiers",
+      "Returns output as a JSON array of strings with each topic as a separate array element"
+    ],
+    "task_description": "Extract topics out of a passage of text from a scholarly article into a JSON array of strings",
+    "scenario": "Testing with a dense technical biology passage containing specialized nomenclature, methodology terms, and organism names to ensure precise identification of domain-specific topics"
+  }
+]

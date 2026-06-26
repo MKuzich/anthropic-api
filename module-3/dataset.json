@@ -1,0 +1,34 @@
+[
+  {
+    "prompt_inputs": {
+      "height": "180 cm",
+      "weight": "72 kg",
+      "goal": "Carbohydrate-loading meal plan for marathon race day (day before competition)",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Meal plan covers one full day with 3+ meals/snacks",
+      "Total daily carbohydrates comprise 8-12g per kg body weight (~580-860g)",
+      "All meals are practical, easy-to-digest foods suitable for pre-race preparation",
+      "Plan is presented in compact, concise format"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a professional endurance athlete (marathon runner) who has high caloric needs and specific carbohydrate-loading requirements the day before a race"
+  },
+  {
+    "prompt_inputs": {
+      "height": "172 cm",
+      "weight": "65 kg",
+      "goal": "Maintain lean muscle and sustained energy for rock climbing performance",
+      "restrictions": "Vegetarian"
+    },
+    "solution_criteria": [
+      "Meal plan covers all three meals and includes vegetarian protein sources (legumes, dairy, nuts, seeds)",
+      "Macronutrient distribution supports lean muscle maintenance with adequate protein intake",
+      "Foods provide sustained energy suitable for climbing performance and recovery",
+      "Plan is concise and presented in a clear, easy-to-follow 1-day format"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a lightweight sport athlete (rock climber) who needs balanced macronutrients with emphasis on lean protein and sustained energy, with dietary restrictions (vegetarian)"
+  }
+]
