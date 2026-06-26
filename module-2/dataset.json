@@ -1,0 +1,17 @@
+[
+  {
+    "task": "Parse an AWS CloudFormation template and extract all resource logical IDs that are of type 'AWS::S3::Bucket'",
+    "format": "python",
+    "solution_criteria": "Function should return a list of logical IDs for all S3 bucket resources. Should handle both JSON and YAML-formatted templates (as JSON). Should correctly identify only resources with Type equal to 'AWS::S3::Bucket'."
+  },
+  {
+    "task": "Create a JSON IAM policy that allows a principal to perform read-only operations on a specific S3 bucket named 'my-data-bucket' and all objects within it",
+    "format": "json",
+    "solution_criteria": "Valid JSON IAM policy with correct structure. Must include s3:GetObject and s3:ListBucket actions. Must restrict resources to the specified bucket ARN and its contents. Must use 'Allow' effect."
+  },
+  {
+    "task": "Create a regular expression that matches valid AWS IAM role ARNs",
+    "format": "regex",
+    "solution_criteria": "Regex should match ARNs in format 'arn:aws:iam::ACCOUNT_ID:role/ROLE_NAME'. Should validate numeric account ID (12 digits) and alphanumeric role names with hyphens and underscores. Should not match invalid formats or other AWS resource types."
+  }
+]
