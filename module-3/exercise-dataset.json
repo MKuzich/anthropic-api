@@ -1,27 +1,26 @@
 [
   {
     "prompt_inputs": {
-      "content": "The phenomenological approach to understanding consciousness has long intersected with cognitive science, particularly in examining how subjective experience emerges from neural processes. Heidegger's concept of Being-in-the-world challenges Cartesian dualism by suggesting that consciousness is fundamentally embedded within social and material contexts rather than existing as a disembodied entity. Contemporary neuroscientific research on embodied cognition supports this philosophical framework, revealing that emotional processing, memory formation, and semantic understanding are deeply intertwined with bodily states and environmental interactions. Furthermore, postcolonial theory has critiqued the Western-centric epistemology underlying both traditional phenomenology and neuroscience, arguing for recognition of culturally diverse ways of knowing and experiencing reality. These intersecting perspectives\u2014phenomenology, cognitive neuroscience, embodied cognition, and postcolonial critique\u2014collectively reshape our understanding of consciousness as a multifaceted phenomenon that resists reductionist explanation."
+      "content": "The intersection of climate policy and macroeconomic performance has become increasingly critical as nations implement carbon pricing mechanisms. Recent empirical studies demonstrate that carbon tax implementation in Nordic countries reduced aggregate emissions by 23% while maintaining GDP growth rates of 2.1% annually, suggesting that environmental regulation need not compromise economic productivity. Simultaneously, renewable energy investments have created substantial employment opportunities in manufacturing and installation sectors, with the International Energy Agency projecting 24 million clean energy jobs by 2030. However, the transition poses significant challenges for fossil fuel-dependent regions, requiring targeted fiscal transfers and workforce retraining programs to mitigate distributional impacts. Climate scientists emphasize that these economic adjustments must accelerate substantially to limit global temperature increase to 1.5\u00b0C, necessitating integrated policy frameworks that balance decarbonization targets with labor market stability and intergenerational equity considerations."
     },
     "solution_criteria": [
-      "Extracts all major disciplinary fields and theoretical frameworks mentioned (phenomenology, cognitive science, neuroscience, postcolonial theory, embodied cognition)",
-      "Captures abstract conceptual topics that overlap across disciplines (consciousness, Being-in-the-world, subjective experience, epistemology)",
-      "Identifies nuanced, interconnected themes rather than only surface-level terms",
-      "Returns output as a valid JSON array of strings"
+      "Identifies distinct topics from both climate science and economics domains without over-generalizing into single broad categories",
+      "Captures specific conceptual areas including carbon pricing, renewable energy, employment, climate targets, and policy integration",
+      "Returns results as a JSON array of strings"
     ],
     "task_description": "Extract topics out of a passage of text from a scholarly article into a JSON array of strings",
-    "scenario": "Testing with a humanities passage containing abstract concepts and interdisciplinary themes to verify accurate extraction of nuanced, overlapping topics"
+    "scenario": "Testing with a interdisciplinary passage containing mixed topics from climate science and economics to evaluate if the prompt can identify multiple distinct conceptual areas and avoid over-generalization"
   },
   {
     "prompt_inputs": {
-      "content": "We employed quantitative PCR analysis to investigate CRISPR-Cas9 gene editing efficiency in Arabidopsis thaliana transgenic lines carrying a doxycycline-inducible promoter system. Genomic DNA was extracted using the CTAB method, and target sequences within the AtPDS3 locus were amplified using sequence-specific primers designed to detect both wild-type and edited alleles. RNA-seq transcriptomics revealed significant upregulation of DNA repair pathways, including homologous recombination and non-homologous end joining mechanisms, with differential expression analysis identifying 847 significantly dysregulated genes (FDR < 0.05). Off-target mutagenesis was assessed through whole-genome sequencing of predicted off-target sites identified by CRISPOR software, while phenotypic characterization included chlorophyll fluorescence measurements and stomatal conductance assays to evaluate photosynthetic performance in the edited germplasm."
+      "content": "Recent advances in topological quantum computing leverage non-abelian anyons, particularly Majorana fermions confined in one-dimensional nanowires, to achieve fault-tolerant quantum gates through braiding operations. The topological protection mechanism exploits the energy gap separating ground states from excited states, rendering quantum information robust against local perturbations and decoherence. Implementation requires precise control of Rashba spin-orbit coupling and Zeeman splitting parameters, with experimental validation through Coulomb blockade spectroscopy and tunneling conductance measurements. These systems demonstrate braiding statistics distinct from fermionic or bosonic behavior, enabling universal quantum computation through topological quantum error correction codes such as the surface code architecture."
     },
     "solution_criteria": [
-      "Extracts all major domain-specific topics including molecular techniques (PCR, CRISPR-Cas9, RNA-seq), biological organisms (Arabidopsis thaliana), genetic elements (AtPDS3 locus), and analytical methods (CTAB extraction, whole-genome sequencing, fluorescence measurements)",
-      "Correctly identifies specialized nomenclature and methodology terms as distinct topics rather than treating them as modifiers",
-      "Returns output as a JSON array of strings with each topic as a separate array element"
+      "Extracts specific technical terms and phenomena (e.g., 'Majorana fermions', 'braiding operations', 'Rashba spin-orbit coupling') rather than vague umbrella terms like 'quantum computing'",
+      "Captures domain-specific jargon relevant to topological quantum computing implementation",
+      "Includes all major technical concepts mentioned in the passage"
     ],
     "task_description": "Extract topics out of a passage of text from a scholarly article into a JSON array of strings",
-    "scenario": "Testing with a dense technical biology passage containing specialized nomenclature, methodology terms, and organism names to ensure precise identification of domain-specific topics"
+    "scenario": "Testing with a highly specialized passage from a niche field (e.g., quantum computing or ancient linguistics) using domain-specific jargon to assess whether the prompt extracts precise technical topics versus vague umbrella terms"
   }
 ]
